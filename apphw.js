@@ -11,7 +11,7 @@ const teamMembers = [
     //   new Manager("Edward", 1, "Edward@heisready.com", 200),
     //   new Engineer("Shirley", 2, "Shirley@sheisready.com", "viaShirley"),
     //   new Intern("Claudia", 3, "Claudia@sheisready.com", "UofA"),
-    //   new Intern("Sydney", 4, "Sydney@sheiscool.com", "ASU")
+    //   new Intern("Sydney", 4, "Sydney@sheisready.com", "ASU")
 ];
 
 function createManager() {
@@ -49,19 +49,20 @@ function createManager() {
                             <title>Document</title>
                         </head>
                         <body>
-                          <h1>${testintern.name}</h1> 
-                          <h1>${testintern.role}</h1> 
-                          <h1>${testintern.id}</h1> 
-                          <h1>${testintern.email}</h1>  
-                          <h1>${testintern.school}</h1> 
+                          <h1>${testmanager.name}</h1> 
+                          <h1>${testmanager.role}</h1> 
+                          <h1>${testmanager.id}</h1> 
+                          <h1>${testmanager.email}</h1>  
+                          <h1>${testmanager.school}</h1> 
                         </body>
                         </html>`
-        fs.writeFile('intern.html', HTML, function(err) {
+        fs.writeFile('manager.html', HTML, function(err) {
             if (err) throw err;
             console.log('Saved!');
         });
     });
 }
+createManager();
 
 function createIntern() {
     inquirer.prompt([{
